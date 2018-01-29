@@ -12,7 +12,7 @@ SpringCloud-实战
 &nbsp;&nbsp;使用Zuul实现智能路由  
 &nbsp;&nbsp;使用Feign实现微服务调用 支持软负载均衡  
 
-服务端口分配：
+服务端口分配：  
 &nbsp;&nbsp;服务注册中心1   -----   1100  
 &nbsp;&nbsp;服务注册中心2   -----   1200  
 &nbsp;&nbsp;服务提供者并消费者1 -----2100  
