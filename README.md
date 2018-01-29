@@ -19,6 +19,6 @@ SpringCloud-实战
 &nbsp;&nbsp;服务提供者并消费者2 -----2200  
 &nbsp;&nbsp;服务提供者并消费者3 -----2300  
 &nbsp;&nbsp;服务网关Zuul    -----   3100  
-&nbsp;&nbsp;服务配置中心1   -----   4100  
+&nbsp;&nbsp;服务配置中心1   -----   4100  
 &nbsp;&nbsp;服务配置中心2   -----   4200  
  
