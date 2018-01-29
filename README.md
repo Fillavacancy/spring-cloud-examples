@@ -6,7 +6,7 @@ SpringCloud-实战
 &nbsp;&nbsp;三个服务提供者并服务消费者  
 &nbsp;&nbsp;两个服务网关 --- 实现了网关的高可用  
 &nbsp;&nbsp;使用Eureka实现服务发现  
-&nbsp;&nbsp;使用Config实现配置管理  
+&nbsp;&nbsp;使用Config实现配置管理  Git 仓库存储 支持热更新  
 &nbsp;&nbsp;使用Bus实现消息总线 RabbitMQ  
 &nbsp;&nbsp;使用Hystrix实现断路器  
 &nbsp;&nbsp;使用Zuul实现智能路由  
