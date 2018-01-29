@@ -11,3 +11,7 @@ eureka:
     prefer-ip-address: true                       # 设置微服务调用地址为IP优先（缺省为false）
     lease-renewal-interval-in-seconds: 5          # 心跳时间，即服务续约间隔时间（缺省为30s）
     lease-expiration-duration-in-seconds: 15      # 发呆时间，即服务续约到期时间（缺省为90s）
+
+feign:
+  hystrix:
+    enabled: true # 启用熔断的开关

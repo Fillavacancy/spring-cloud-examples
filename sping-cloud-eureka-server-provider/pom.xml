@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xjz.example</groupId>
-    <artifactId>sping-cloud-eureka-config-01</artifactId>
+    <artifactId>sping-cloud-eureka-server-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>sping-cloud-eureka-config-01</name>
+    <name>sping-cloud-eureka-server-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -19,9 +19,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!-- sping cloud eureka 客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>

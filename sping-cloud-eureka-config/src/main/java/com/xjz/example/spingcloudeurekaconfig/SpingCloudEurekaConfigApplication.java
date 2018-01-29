@@ -1,4 +1,4 @@
-package com.xjz.example.spingcloudeurekaconfig01;
+package com.xjz.example.spingcloudeurekaconfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +9,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableConfigServer
 @EnableEurekaClient
 @SpringBootApplication
-public class SpingCloudEurekaConfig01Application {
+public class SpingCloudEurekaConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpingCloudEurekaConfig01Application.class, args);
+        SpringApplication.run(SpingCloudEurekaConfigApplication.class, args);
     }
 }

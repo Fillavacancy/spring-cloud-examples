@@ -1,0 +1,31 @@
+server:
+  port: 3100
+
+spring:
+  application:
+    name: sping-cloud-eureka-zuul       # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
+
+zuul:
+  ignored-services: "*"            # 设置忽略的服务，即配置后将不会被路由（但对于明确配置在路由中的，将不会被忽略）
+  routes:
+    sping-cloud-eureka-server-provider:
+      path: /server/provider/**
+    spring-cloud-eureka-consumer-01:
+      path: /consumer/01/**
+    spring-cloud-eureka-consumer-02:
+      path: /consumer/02/**
+    spring-cloud-eureka-consumer-03:
+      path: /consumer/03/**
+
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true                   # 设置微服务调用地址为IP优先（缺省为false）
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 15  # 发呆时间，即服务续约到期时间（缺省为90s）
+  client:
+    healthcheck:
+      enabled: true      # 开启健康检查（依赖spring-boot-starter-actuator）
+    serviceUrl:
+      defaultZone: http://192.168.10.118:1100/eureka/  # 指定服务注册中心的地址
