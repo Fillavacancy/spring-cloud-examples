@@ -54,12 +54,11 @@
 
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
+        <module>sping-cloud-eureka-config</module>
         <module>sping-cloud-eureka-server-01</module>
         <module>sping-cloud-eureka-server-02</module>
-        <module>sping-cloud-eureka-config-01</module>
-        <module>sping-cloud-eureka-config-02</module>
-        <module>sping-cloud-eureka-zuul-01</module>
-        <module>sping-cloud-eureka-zuul-02</module>
+        <module>sping-cloud-eureka-server-provider</module>
+        <module>sping-cloud-eureka-zuul</module>
         <module>spring-cloud-eureka-consumer-01</module>
         <module>spring-cloud-eureka-consumer-02</module>
         <module>spring-cloud-eureka-consumer-03</module>
