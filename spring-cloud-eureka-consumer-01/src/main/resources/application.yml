@@ -4,14 +4,6 @@ server:
 spring:
   application:
     name: spring-cloud-eureka-consumer-01     # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
-  session:
-    store-type: redis
-  redis:
-    url: 192.168.10.123
-    password: password
-    database: 1
-    port: 6379
-    timeout: 0
 
 eureka:
   instance:
