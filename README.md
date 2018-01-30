@@ -5,12 +5,12 @@ SpringCloud-实战
 &nbsp;&nbsp;两个配置中心     --- 分布式配置中心的高可用  
 &nbsp;&nbsp;一个服务提供者  
 &nbsp;&nbsp;三个服务提供者并服务消费者  
-&nbsp;&nbsp;两个服务网关 --- 实现了网关的高可用    
-&nbsp;&nbsp;使用Eureka实现服务发现  
+&nbsp;&nbsp;两个服务网关 --- 实现了网关的高可用      
+&nbsp;&nbsp;使用Eureka实现服务发现    
 &nbsp;&nbsp;使用Config实现配置管理  Git 仓库存储 支持热更新    
-&nbsp;&nbsp;使用Bus实现消息总线 RabbitMQ  实现配置热更新
+&nbsp;&nbsp;使用Bus实现消息总线 RabbitMQ  实现配置热更新  
 &nbsp;&nbsp;使用Hystrix实现断路器  
-&nbsp;&nbsp;使用Zuul实现智能路由   
+&nbsp;&nbsp;使用Zuul实现智能路由  
 &nbsp;&nbsp;使用Feign实现微服务调用 支持软负载均衡  
 
 服务端口分配：  
