@@ -9,7 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/Fillavacancy/spring-cloud-examples  # 配置git仓库的地址
-          searchPaths: config-repo                             # git仓库下的相对地址（多个则用半角逗号分隔）
+          searchPaths: config-prod                             # git仓库下的相对地址（多个则用半角逗号分隔）
           # username: username                                 # 只有private的项目才需配置用户名和密码
           # password: password                                 # 只有private的项目才需配置用户名和密码
 
