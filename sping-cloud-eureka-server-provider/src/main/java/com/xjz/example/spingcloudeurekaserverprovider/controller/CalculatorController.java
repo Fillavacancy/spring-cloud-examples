@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 服务提供方暴露的数学运算服务
@@ -24,7 +25,9 @@ public class CalculatorController {
     private DiscoveryClient client;
 
     @RequestMapping("/add")
-    public int add(int a, int b) {
+    public int add(HttpServletRequest request, int a, int b) {
+        System.out.println("-----------------" + request.getRequestedSessionId());
+        System.out.println("-----------------" + request.getSession().getId());
         //加运算
         int result = a + b;
         //输出服务信息

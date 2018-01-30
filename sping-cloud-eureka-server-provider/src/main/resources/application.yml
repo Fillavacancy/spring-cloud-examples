@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: sping-cloud-eureka-server-provider       # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
+    name: sping-cloud-eureka-server-provider     # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
 
 eureka:
   instance:
@@ -14,5 +14,7 @@ eureka:
   client:
     healthcheck:
       enabled: true       # 开启健康检查（依赖spring-boot-starter-actuator）
-    serviceUrl:
-      defaultZone: http://127.0.0.1:1100/eureka/  # 指定服务注册中心的地址
+
+feign:
+  hystrix:
+    enabled: true # 启用熔断的开关

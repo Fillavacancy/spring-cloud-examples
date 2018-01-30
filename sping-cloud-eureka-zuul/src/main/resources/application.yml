@@ -6,17 +6,33 @@ spring:
     name: sping-cloud-eureka-zuul       # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
 
 zuul:
+  add-host-header: true             # 页面重定向
   ignored-services: "*"            # 设置忽略的服务，即配置后将不会被路由（但对于明确配置在路由中的，将不会被忽略）
+  sensitive-headers: Cookie,Set-Cookie,Authorization
   routes:
     sping-cloud-eureka-server-provider:
       path: /server/provider/**
+      custom-sensitive-headers: false
     spring-cloud-eureka-consumer-01:
       path: /consumer/01/**
+      custom-sensitive-headers: false
     spring-cloud-eureka-consumer-02:
       path: /consumer/02/**
+      custom-sensitive-headers: false
     spring-cloud-eureka-consumer-03:
       path: /consumer/03/**
+      custom-sensitive-headers: false
 
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 600000
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 600000
 
 eureka:
   instance:

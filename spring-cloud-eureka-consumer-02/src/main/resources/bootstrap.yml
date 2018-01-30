@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    config:
+      name: spring.cloud.eureka.consumer.02
+      profile: prod
+      label: master
+      discovery:
+        enabled: true #开启Config服务发现支持
+        service-id: sping-cloud-eureka-config # 此处需要设置成Config Server在Eureka上注册的服务名
+    bus:
+      trace:
+        enabled: true # 开启消息跟踪
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672        # 注意端口是5672，不是15672
+    username: guest
+    password: guest
+
+management:
+  security:
+    enabled: false # 刷新时，关闭安全验证
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.10.118:1100/eureka/  # 指定服务注册中心的地址

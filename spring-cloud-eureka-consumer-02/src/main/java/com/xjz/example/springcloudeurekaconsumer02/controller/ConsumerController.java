@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 服务调用方
  */
@@ -16,7 +18,8 @@ public class ConsumerController {
     private ProviderCommonService providerCommonService;
 
     @RequestMapping("/toadd")
-    public int toadd(int a, int b) {
+    public int toadd(HttpServletRequest request, int a, int b) {
+        System.out.println("-----------------" + request.getRequestedSessionId());
         return providerCommonService.myadd(a, b);
     }
 }
