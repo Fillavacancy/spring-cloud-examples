@@ -23,7 +23,7 @@ public interface ProviderCommonService {
      * （也可以外面独立定义该类，个人觉得没必要，这种东西写成内部类最合适）
      */
     @Component
-    public class HystrixCalculatorService implements ProviderCommonService {
+    class HystrixCalculatorService implements ProviderCommonService {
         @Override
         public int myadd(@RequestParam("a") int a, @RequestParam("b") int b) {
             return -999;
