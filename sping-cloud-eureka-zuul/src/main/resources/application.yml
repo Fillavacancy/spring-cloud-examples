@@ -8,6 +8,7 @@ spring:
 zuul:
   add-host-header: true             # 页面重定向
   ignored-services: "*"            # 设置忽略的服务，即配置后将不会被路由（但对于明确配置在路由中的，将不会被忽略）
+  #ignoredPatterns: /**/admin/**    # 设置忽略的请求路径
   sensitive-headers: Cookie,Set-Cookie,Authorization
   routes:
     sping-cloud-eureka-server-provider:
@@ -22,6 +23,9 @@ zuul:
     spring-cloud-eureka-consumer-03:
       path: /consumer/03/**
       custom-sensitive-headers: false
+    # 表示设置不为以上服务的请求的路径 但是设置了 ignored-services 的服务没用
+    legacy:
+      path: /**
 
 hystrix:
     command:

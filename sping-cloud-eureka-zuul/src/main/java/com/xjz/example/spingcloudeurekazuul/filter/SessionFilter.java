@@ -49,7 +49,7 @@ public class SessionFilter extends ZuulFilter {
         System.out.println("-----------------" + req.getRequestedSessionId());
         System.out.println("-----------------" + req.getSession().getId());
         Enumeration<String> et = req.getHeaderNames();
-        System.out.println("\r\n---------------------------------------------------------------");
+        System.out.println("\r\n------------------------输出Header参数开始---------------------------------------");
         while (et.hasMoreElements()) {
             String name = et.nextElement();
             String value = req.getHeader(name);
@@ -65,6 +65,8 @@ public class SessionFilter extends ZuulFilter {
                 }
             System.out.print("\r\n");
         }
+        System.out.println("\r\n------------------------输出Header参数结束---------------------------------------");
+        // 将请求session同步到被调用路由微服务
         ctx.addZuulRequestHeader("Cookie", "JSESSIONID=" + req.getSession().getId());
         System.out.println("\r\n---------------------------------------------------------------");
         return null;

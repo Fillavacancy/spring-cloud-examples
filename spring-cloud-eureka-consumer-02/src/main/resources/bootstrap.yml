@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: spring-cloud-eureka-consumer-02     # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
   cloud:
     config:
       name: spring.cloud.eureka.consumer.02

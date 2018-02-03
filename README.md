@@ -17,5 +17,11 @@ SpringCloud-实战
 &nbsp;&nbsp;服务注册中心      -----   1100   1200  
 &nbsp;&nbsp;服务网关Zuul      -----   3100   3200    
 &nbsp;&nbsp;服务提供者并消费者 -----   2100   2200   2300   2400   
-&nbsp;&nbsp;服务配置中心      -----   4100   4200  
+&nbsp;&nbsp;服务配置中心      -----   4100   4200
+
+Eureka用于服务的注册于发现  
+Feign支持服务的调用以及均衡负载  
+Hystrix处理服务的熔断防止故障扩散  
+Spring Cloud Config服务集群配置中心  
+Spring Cloud Zuul路由是微服务架构的不可或缺的一部分，提供动态路由，监控，弹性，安全等的边缘服务  
  

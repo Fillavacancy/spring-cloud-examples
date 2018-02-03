@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //绑定該接口到CalculatorServer服务，并通知Feign组件对该接口进行代理（不需要编写接口实现）
 // fallback 和 fallbackFactory 都是实现断路器的功能
 // fallbackFactory 是 fallback 的增强版 可以捕获到异常
+//@FeignClient(value = "sping-cloud-eureka-zuul", fallbackFactory = ProviderCommonService.HystrixCalculatorService.class)
 @FeignClient(value = "sping-cloud-eureka-server-provider", fallbackFactory = ProviderCommonService.HystrixCalculatorService.class)
 public interface ProviderCommonService {
     ////@PathVariable這種也是支持的
@@ -19,6 +20,7 @@ public interface ProviderCommonService {
     //int myadd(@PathVariable("a") int a, @RequestParam("b") int b);
 
     //通过SpringMVC的注解来配置所綁定的服务下的具体实现
+    //@RequestMapping(value = "/server/provider/add", method = RequestMethod.GET)
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public int myadd(@RequestParam("a") int a, @RequestParam("b") int b);
 

@@ -1,6 +1,14 @@
 spring:
+  application:
+    name: spring-cloud-eureka-consumer-01     # 指定发布的微服务名（以后调用时，只需该名称即可访问该服务）
   cloud:
     config:
+      # 这个是设置Git仓库文件名 但是是可以去掉的 默认 spring.application.name 但是要参考 他的文件规则
+      #/{application}/{profile}[/{label}]
+      #/{application}-{profile}.yml
+      #/{label}/{application}-{profile}.yml
+      #/{application}-{profile}.properties
+      #/{label}/{application}-{profile}.properties
       name: spring.cloud.eureka.consumer.01
       profile: prod
       label: master
