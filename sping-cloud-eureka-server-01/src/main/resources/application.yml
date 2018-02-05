@@ -26,7 +26,7 @@ eureka:
     serviceUrl:
       # 实际测试：若修改尾部的eureka为其它的，比如/myeureka，注册中心启动没问题，但服务端在注册时会失败
       # 报告异常：com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-      defaultZone: http://192.168.10.118:1200/eureka/
+      defaultZone: http://user:password@192.168.10.118:1200/eureka/
 
 # 安全认证的配置
 security:

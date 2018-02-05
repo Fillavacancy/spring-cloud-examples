@@ -25,4 +25,4 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.118:1100/eureka/  # 指定服务注册中心的地址
+      defaultZone: http://user:password@192.168.10.118:1100/eureka/  # 指定服务注册中心的地址
